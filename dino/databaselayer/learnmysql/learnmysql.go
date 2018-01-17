@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-import _ "github.com/lib/pq"
+import _ "github.com/go-sql-driver/mysql"
 
 type animal struct {
 	id         int
@@ -16,19 +16,16 @@ type animal struct {
 	age        int
 }
 
-// https://godoc.org/github.com/lib/pq
 func main() {
 	//connect to the database
-	// 	connStr := "user=pqgotest dbname=pqgotest sslmode=verify-full"
-
-	db, err := sql.Open("postgres", "user=ryan dbname=dino sslmode=disable")
+	db, err := sql.Open("mysql", "ryan:ryantan@/Dino")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer db.Close()
 
 	//general query with arguments
-	rows, err := db.Query("select * from animals where age > $1", 5) // $ insterad of ?
+	rows, err := db.Query("select * from Dino.animals where age > ?", 10)
 	if err != nil {
 		log.Fatal(err)
 	}
