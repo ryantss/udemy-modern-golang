@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
-)
 
-import _ "github.com/mattn/go-sqlite3"
+	_ "github.com/mattn/go-sqlite3"
+)
 
 type animal struct {
 	id         int
