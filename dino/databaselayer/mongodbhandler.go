@@ -1,6 +1,8 @@
 package databaselayer
 
 import (
+	"fmt"
+
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
@@ -17,6 +19,7 @@ func NewMongodbHandler(connection string) (*MongodbHandler, error) {
 }
 
 func (handler *MongodbHandler) GetAvailableDynos() ([]Animal, error) {
+	fmt.Println("mongodb GetAvailableDynos")
 	s := handler.getFreshSession()
 	defer s.Close()
 	animals := []Animal{}

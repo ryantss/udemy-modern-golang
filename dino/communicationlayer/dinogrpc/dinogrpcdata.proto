@@ -16,7 +16,7 @@ message request {
 
 service DinoService {
     rpc GetAnimal(request) returns (animal);
-    rpc GetAllAnimal(request) returns (stream animal);
+    rpc GetAllAnimals(request) returns (stream animal);
 }
 
 // [Client application] <==========> [Server application] ---> <Dino database>
