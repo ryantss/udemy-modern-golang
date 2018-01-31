@@ -16,6 +16,9 @@ import (
 	"google.golang.org/grpc/grpclog"
 )
 
+// export GOPATH="/Users/ryan/gohome:/Users/ryan/dev/lab/golang-tutorial"
+// GRPC_GO_LOG_SEVERITY_LEVEL=INFO go run main.go -op s
+// GRPC_GO_LOG_SEVERITY_LEVEL=INFO go run main.go -op c
 func main() {
 	op := flag.String("op", "s", "s for server, and c for client")
 	flag.Parse()
