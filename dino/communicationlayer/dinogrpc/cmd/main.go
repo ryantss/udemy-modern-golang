@@ -7,8 +7,8 @@ import (
 	"log"
 	"net"
 	"strings"
-	"udemy-modern-golang/dino/communicationlayer/dinogrpc"
-	"udemy-modern-golang/dino/databaselayer"
+	"github.com/skyfish81/udemy-modern-golang/dino/communicationlayer/dinogrpc"
+	"github.com/skyfish81/udemy-modern-golang/dino/databaselayer"
 
 	"golang.org/x/net/context"
 

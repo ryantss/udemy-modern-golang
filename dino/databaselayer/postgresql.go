@@ -1,5 +1,6 @@
 package databaselayer
 
+// go get github.com/lib/pq
 import (
 	"database/sql"
 

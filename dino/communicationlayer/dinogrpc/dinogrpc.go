@@ -2,9 +2,10 @@ package dinogrpc
 
 import (
 	"fmt"
-	"udemy-modern-golang/dino/databaselayer"
 
-	context "golang.org/x/net/context"
+	"github.com/skyfish81/udemy-modern-golang/dino/databaselayer"
+
+	"golang.org/x/net/context"
 )
 
 type DinoGrpcServer struct {
